@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mind Hub Privacy Policy</title>
+    <style>
+      :root {
+        --bg: #ffffff;
+        --fg: #1f1f1f;
+        --muted: #5c5c5c;
+        --line: #e6e6e6;
+        --accent: #b7791f;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #161616;
+          --fg: #ececec;
+          --muted: #a8a8a8;
+          --line: #2c2c2c;
+          --accent: #e0a84a;
+        }
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font: 16px/1.6 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          sans-serif;
+      }
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 32px 16px 64px;
+      }
+      h1 {
+        font-size: 28px;
+        margin: 0 0 4px;
+      }
+      h2 {
+        font-size: 20px;
+        margin: 32px 0 8px;
+        padding-top: 16px;
+        border-top: 1px solid var(--line);
+      }
+      p,
+      li {
+        color: var(--fg);
+      }
+      .muted {
+        color: var(--muted);
+      }
+      a {
+        color: var(--accent);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 15px;
+      }
+      th,
+      td {
+        text-align: left;
+        vertical-align: top;
+        padding: 8px 8px 8px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      th {
+        color: var(--muted);
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Mind Hub Privacy Policy</h1>
+      <p class="muted">Effective 9 November 2026</p>
+
+      <p>
+        Mind Hub is a notes, diary, journal and projects app with an AI chat.
+        This policy explains what data the app and its server handle, why, who
+        else receives it, and how you can delete it.
+      </p>
+
+      <h2>Who is responsible</h2>
+      <p>
+        Mind Hub is developed by <strong>Ivan Tsukylo</strong> (“we”). For any
+        question about your data, or to use any of your rights below, write to
+        <a href="mailto:mindhubappdev@gmail.com">mindhubappdev@gmail.com</a>.
+      </p>
+
+      <h2>What stays on your device</h2>
+      <p>
+        Your notes, diary pages, journal, projects, tables, drawings, voice
+        recordings, profile picture and settings are stored only on your device.
+        We do not receive them unless you send them to the AI chat yourself (see
+        below). Events from your phone calendar are read on the device to show
+        them beside your notes; they never leave the device.
+      </p>
+      <p>
+        Because we do not keep a copy, this data cannot be recovered if you
+        delete the app or lose or replace your phone. Use Backup in the app to
+        export a backup file and keep it somewhere safe.
+      </p>
+
+      <h2>What we collect</h2>
+      <table>
+        <tr>
+          <th>Data</th>
+          <th>Why</th>
+        </tr>
+        <tr>
+          <td>
+            <strong>Account</strong>: email address, nickname, password (stored
+            only as a hash), or the account identifier from Sign in with Apple
+            or Google
+          </td>
+          <td>
+            To create your account, sign you in, send verification and password
+            reset codes, and keep your chats and plan tied to you.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>AI chat</strong>: your messages, the notes, projects and
+            tables you attach, the diary, journal or calendar entries you allow
+            the chat to read, and the photos, videos, audio and documents you
+            attach
+          </td>
+          <td>
+            To answer you and to show your chat history on your devices. Chat
+            text is stored encrypted on our server; files are stored in
+            Cloudflare R2.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Usage</strong>: how much of the AI allowance you have used
+          </td>
+          <td>To apply the limits of your plan.</td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Purchases</strong>: your plan, subscription status and
+            purchase history
+          </td>
+          <td>
+            To unlock the features you paid for and restore them on another
+            device.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Diagnostics</strong>: crash reports, device model, operating
+            system and app version
+          </td>
+          <td>To find and fix crashes.</td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Analytics</strong>: which features are used, as counts and
+            identifiers, together with an app instance identifier
+          </td>
+          <td>
+            To understand which parts of the app are useful. Analytics never
+            contain the text of your notes or messages.
+          </td>
+        </tr>
+      </table>
+      <p>
+        Diagnostics and analytics are linked to your account identifier. We do
+        not track you across other companies’ apps or websites, we do not show
+        ads, and we do not sell your data.
+      </p>
+
+      <h2>Who else receives your data</h2>
+      <ul>
+        <li>
+          <strong>Anthropic</strong> runs the Claude model that writes the AI
+          chat’s replies. It receives what you send in the chat, as listed
+          above, only after you allow it in the app. You can withdraw this in
+          Settings → Privacy; the chat stops working until you allow it again.
+        </li>
+        <li>
+          <strong>Cloudflare</strong> (R2 storage) keeps the files you attach in
+          the chat.
+        </li>
+        <li>
+          <strong>Google Firebase</strong> (Crashlytics and Analytics) receives
+          diagnostics and analytics.
+        </li>
+        <li>
+          <strong>AppsFlyer</strong> receives an install identifier and basic
+          app activity (installs, sessions, and purchase events forwarded by
+          RevenueCat) to measure where installs come from. It does not receive
+          the advertising identifier (IDFA / Android advertising ID) or any of
+          your content.
+        </li>
+        <li>
+          <strong>RevenueCat</strong>, together with Apple App Store or Google
+          Play, processes subscriptions. We never see your payment details.
+        </li>
+        <li>
+          <strong>Apple and Google</strong> confirm your identity when you use
+          Sign in with Apple or Google.
+        </li>
+        <li>
+          <strong>Dictation</strong> in the chat uses the speech recognition of
+          your phone (Apple or Google). The audio does not reach our server.
+        </li>
+        <li>
+          Our hosting and email providers, only to run the server and send
+          account emails.
+        </li>
+      </ul>
+      <p>
+        Some of these providers process data outside your country, including in
+        the United States. They are bound by their own terms to protect it.
+      </p>
+
+      <h2>How long we keep it</h2>
+      <p>
+        We keep your account, chats and files until you delete them or your
+        account. Deleting a chat in the app removes it from our server. Crash
+        reports and analytics are kept by Firebase for a limited period under
+        its own retention settings.
+      </p>
+
+      <h2>Deleting your account</h2>
+      <p>
+        In the app, open Account → Delete account. This deletes your account,
+        all chats, messages, attached files, usage records and subscription
+        records from our server, and the data stored on that device. An active
+        subscription is managed by Apple or Google — cancel it in your store
+        settings so you are not charged again.
+      </p>
+
+      <h2>Your rights</h2>
+      <p>
+        You can ask us for a copy of your data, to correct it, to delete it, or
+        to restrict or object to its use, and you can withdraw consent at any
+        time. If you live in the European Economic Area or the United Kingdom,
+        you can also complain to your local data protection authority. Write to
+        <a href="mailto:mindhubappdev@gmail.com">mindhubappdev@gmail.com</a>.
+      </p>
+
+      <h2>Children</h2>
+      <p>
+        Mind Hub is not directed at children under 13 and we do not knowingly
+        collect their data. If you believe a child has created an account,
+        contact us and we will delete it.
+      </p>
+
+      <h2>Changes</h2>
+      <p>
+        If this policy changes, we will update the date at the top of this page
+        and, for important changes, tell you in the app.
+      </p>
+    </main>
+  </body>
+</html>
