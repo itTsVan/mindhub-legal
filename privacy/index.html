@@ -75,7 +75,7 @@
   <body>
     <main>
       <h1>Mind Hub Privacy Policy</h1>
-      <p class="muted">Effective 11 November 2026</p>
+      <p class="muted">Effective 12 November 2026</p>
 
       <p>
         Mind Hub is a notes, diary, journal and projects app with an AI chat.
@@ -85,8 +85,10 @@
 
       <h2>Who is responsible</h2>
       <p>
-        Mind Hub is developed by <strong>Ivan Tsukylo</strong> (“we”). For any
-        question about your data, or to use any of your rights below, write to
+        Mind Hub is developed by <strong>Ivan Tsukylo</strong>, a sole
+        proprietor (FOP) registered in Ukraine (“we”), who is the controller of
+        your personal data. For any question about your data, or to use any of
+        your rights below, write to
         <a href="mailto:support@mymindhub.app">support@mymindhub.app</a>.
       </p>
 
@@ -101,7 +103,16 @@
       <p>
         Because we do not keep a copy, this data cannot be recovered if you
         delete the app or lose or replace your phone. Use Backup in the app to
-        export a backup file and keep it somewhere safe.
+        export a backup file (.zip) and keep it somewhere safe. The backup file
+        contains your notes, media and settings unencrypted; wherever you save
+        it (Files, iCloud Drive, a computer, email) is under your control, not
+        ours.
+      </p>
+      <p>
+        On iPhone or iPad, the app’s data on the device may also be included in your
+        iCloud or computer (Finder / iTunes) backups of the device, under Apple’s
+        terms and your backup settings. On Android, the app opts out of the
+        system backup.
       </p>
 
       <h2>What we collect</h2>
@@ -125,13 +136,25 @@
           <td>
             <strong>AI chat</strong>: your messages, the notes, projects and
             tables you attach, the diary, journal or calendar entries you allow
-            the chat to read, and the photos, videos, audio and documents you
-            attach
+            the chat to read, and the images (JPEG, PNG, WebP, GIF) and
+            documents (PDF, text, Markdown, CSV, JSON, Word, Excel, PowerPoint)
+            you attach. The chat does not accept audio or video files.
           </td>
           <td>
             To answer you and to show your chat history on your devices. Chat
             text is stored encrypted on our server; files are stored in
             Cloudflare R2.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Reports</strong>: when you report an AI reply, the reason
+            and comment you give, the text of that reply, your previous message
+            in the chat, and your account, chat and message identifiers
+          </td>
+          <td>
+            To review the reply and act on it (moderation). The report is
+            emailed to our support address (see “Who else receives your data”).
           </td>
         </tr>
         <tr>
@@ -160,11 +183,28 @@
         <tr>
           <td>
             <strong>Analytics</strong>: which features are used, as counts and
-            identifiers, together with an app instance identifier
+            identifiers, together with an app instance identifier, and your
+            approximate location (country, region or city), which Firebase and
+            AppsFlyer derive from your IP address
           </td>
           <td>
-            To understand which parts of the app are useful. Analytics never
-            contain the text of your notes or messages.
+            To understand which parts of the app are useful and, through
+            AppsFlyer, to attribute installs and measure our advertising (which
+            campaigns or sources bring new users). Approximate location is used
+            for both. Analytics never contain the text of your notes or
+            messages, and never your precise location.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Security</strong>: your IP address and the app’s User-Agent
+            (app and system version) in our server’s request logs and sign-in
+            sessions; on iPhone or iPad, an Apple DeviceCheck token
+          </td>
+          <td>
+            To keep the service secure, limit repeated requests and abuse,
+            protect your sign-in sessions, and allow only one free AI account
+            per device. Apple stores two bits for the device, not your data.
           </td>
         </tr>
       </table>
@@ -182,8 +222,16 @@
         <li>
           <strong>Anthropic</strong> runs the Claude model that writes the AI
           chat’s replies. It receives what you send in the chat, as listed
-          above, only after you allow it in the app. You can withdraw this in
-          Settings → Privacy; the chat stops working until you allow it again.
+          above, only after you allow it in the app. Of the files you attach,
+          it receives the content of images (JPEG, PNG, WebP, GIF), PDF and
+          text files (plain text, Markdown, CSV, JSON). Word, Excel and
+          PowerPoint files, and images in other formats, are not sent to the
+          model: it receives only their file name, type and size. Under Anthropic’s
+          commercial terms it does not use this content to train its models,
+          and it deletes it within 30 days, unless it is flagged for a breach
+          of Anthropic’s usage policy (then kept for up to 2 years) or the law
+          requires longer. You can withdraw this in Settings → Privacy; the
+          chat stops working until you allow it again.
         </li>
         <li>
           <strong>Cloudflare</strong> (R2 storage) keeps the files you attach in
@@ -191,12 +239,15 @@
         </li>
         <li>
           <strong>Google Firebase</strong> (Crashlytics and Analytics) receives
-          diagnostics and analytics, only while you allow them.
+          diagnostics and analytics, only while you allow them, and derives
+          your approximate location from your IP address.
         </li>
         <li>
           <strong>AppsFlyer</strong> receives an install identifier and basic
           app activity (installs, sessions, and purchase events forwarded by
-          RevenueCat) to measure where installs come from. It does not receive
+          RevenueCat), with your IP address and the approximate location
+          derived from it, to attribute installs and measure our advertising
+          (where installs come from). It does not receive
           the advertising identifier (IDFA / Android advertising ID) or any of
           your content, and is used only while you allow analytics.
         </li>
@@ -221,28 +272,108 @@
           <strong>Resend</strong> sends verification and password reset codes to your
           email address. Our hosting provider runs the server.
         </li>
+        <li>
+          <strong>Reports</strong> of AI replies are sent by email: Resend
+          sends the message, Cloudflare Email Routing forwards our support
+          address to a Google Gmail inbox, and it is read there by us. Google
+          stores the email in that inbox.
+        </li>
       </ul>
       <p>
-        Some of these providers process data outside your country, including in
-        the United States. They are bound by their own terms to protect it.
+        Some of these providers process data outside your country, in
+        particular in the United States (Anthropic, Google Firebase, AppsFlyer,
+        RevenueCat, Cloudflare, Resend, Google Gmail). When data from the European Economic
+        Area, the United Kingdom or Switzerland goes to a country without an
+        adequacy decision, the transfer relies on the Standard Contractual
+        Clauses approved by the European Commission (and the UK addendum) or,
+        where the provider is certified, on the EU-U.S. Data Privacy Framework.
+        You can ask us for details of the safeguard used for a provider.
       </p>
+
+      <h2>Legal basis</h2>
+      <p>
+        If you are in the European Economic Area or the United Kingdom, we rely
+        on these legal bases under the GDPR:
+      </p>
+      <ul>
+        <li>
+          <strong>Contract</strong> — to provide your account, the AI chat,
+          your plan and subscriptions, and to send sign-in codes.
+        </li>
+        <li>
+          <strong>Consent</strong> — for sending your chat content to Anthropic,
+          and for analytics, install attribution and crash reports. You can
+          withdraw it at any time in Settings → Privacy; this does not affect
+          what was processed before.
+        </li>
+        <li>
+          <strong>Legitimate interest</strong> — to keep the service secure,
+          prevent abuse and enforce plan limits (server logs, request limits,
+          the one-free-account-per-device check).
+        </li>
+      </ul>
 
       <h2>How long we keep it</h2>
       <p>
         We keep your account, chats and files until you delete them or your
-        account. Deleting a chat in the app removes it from our server. Crash
+        account. Deleting a chat in the app removes it from our server. Report
+        emails are kept for as long as needed to handle the report and then
+        deleted, and no longer than 12 months; they are not deleted when you
+        delete the chat or your account. Server
+        request logs are deleted automatically within 90 days; request-limit
+        counters expire within their time window; a sign-in session’s record
+        is removed after the session expires or is ended. Crash
         reports and analytics are kept by Firebase for a limited period under
         its own retention settings.
       </p>
 
       <h2>Deleting your account</h2>
       <p>
-        In the app, open Account → Delete account. This deletes your account,
-        all chats, messages, attached files, usage records and subscription
-        records from our server, and the data stored on that device. An active
-        subscription is managed by Apple or Google — cancel it in your store
-        settings so you are not charged again.
+        In the app, open Account → Delete account. This immediately deletes
+        your account, all chats, messages, attached files, reports and
+        subscription records from our server, and the data stored on that
+        device. An active subscription is managed by Apple or Google — cancel
+        it in your store settings so you are not charged again.
       </p>
+      <p>Some data is kept for a limited time after that:</p>
+      <ul>
+        <li>
+          <strong>AI usage</strong>: how much of the AI allowance the account
+          used in the last 7 days is kept for 7–8 days, then deleted
+          automatically. It is stored under a one-way hash of your verified
+          email address and your Apple or Google account identifier (not the
+          address itself), together with the former account number, only so
+          that deleting and re-creating an account does not reset the plan
+          limits (abuse prevention).
+        </li>
+        <li>
+          <strong>RevenueCat</strong>: when you delete your account we ask
+          RevenueCat to delete your customer record and its attributes. Apple
+          and Google keep their own records of your purchases under their
+          terms.
+        </li>
+        <li>
+          <strong>Sign in with Apple</strong>: if your account uses Sign in
+          with Apple and the app can confirm it with Apple when you delete the
+          account, we ask Apple to revoke the app’s access to your Apple ID.
+          You can also remove Mind Hub from your Apple ID settings yourself.
+        </li>
+        <li>
+          <strong>Google Firebase (Analytics, Crashlytics) and AppsFlyer</strong>:
+          data they already received is not deleted when you delete your
+          account. It is kept under each provider’s own retention period and
+          then deleted automatically. You can ask us to request its deletion
+          earlier.
+        </li>
+        <li>
+          <strong>Anthropic</strong>: as described above, within 30 days unless
+          flagged or required by law.
+        </li>
+        <li>
+          <strong>Server request logs and report emails</strong>: within the
+          periods in “How long we keep it”.
+        </li>
+      </ul>
 
       <h2>Your rights</h2>
       <p>
@@ -255,9 +386,10 @@
 
       <h2>Children</h2>
       <p>
-        Mind Hub is not directed at children under 13 and we do not knowingly
-        collect their data. If you believe a child has created an account,
-        contact us and we will delete it.
+        Mind Hub is intended only for people aged 18 and older and is rated 18+
+        in the app stores. We do not knowingly collect personal data from
+        anyone under 18. If you believe someone under 18 has created an
+        account, contact us and we will delete it.
       </p>
 
       <h2>Changes</h2>
