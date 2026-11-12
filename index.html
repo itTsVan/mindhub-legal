@@ -6,8 +6,15 @@
     <title>Mind Hub — AI Diary &amp; Notes</title>
     <meta name="description" content="Mind Hub is a diary, notes, journal, calendar, code projects and tables app with an AI assistant that keeps them for you. Support, contact and account help." />
     <link rel="canonical" href="https://mymindhub.app/" />
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="alternate" hreflang="en" href="https://mymindhub.app/" />
+    <link rel="alternate" hreflang="ru" href="https://mymindhub.app/ru/" />
+    <link rel="alternate" hreflang="de" href="https://mymindhub.app/de/" />
+    <link rel="alternate" hreflang="uk" href="https://mymindhub.app/uk/" />
+    <link rel="alternate" hreflang="fr" href="https://mymindhub.app/fr/" />
+    <link rel="alternate" hreflang="es" href="https://mymindhub.app/es/" />
+    <link rel="alternate" hreflang="x-default" href="https://mymindhub.app/" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta property="og:title" content="Mind Hub — AI Diary &amp; Notes" />
     <meta property="og:description" content="A diary and notes your AI keeps for you." />
     <meta property="og:image" content="https://mymindhub.app/apple-touch-icon.png" />
@@ -51,11 +58,12 @@
       .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
 
       nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; gap: 16px; }
-      .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; color: var(--fg); text-decoration: none; }
+      .brand { display: flex; flex-shrink: 0; white-space: nowrap; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; color: var(--fg); text-decoration: none; }
       .brand img { width: 32px; height: 32px; border-radius: 8px; }
-      .nav-links { display: flex; gap: 20px; font-size: 15px; }
-      .nav-links a { color: var(--muted); text-decoration: none; }
+      .nav-links { display: flex; gap: 20px; font-size: 15px; align-items: center; }
+      .nav-links a { color: var(--muted); text-decoration: none; white-space: nowrap; }
       .nav-links a:hover { color: var(--fg); }
+      .nav-links a.button { color: var(--fg); padding: 6px 14px; }
 
       .hero { padding: 56px 0 48px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
       .hero h1 { font-size: 48px; line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 16px; }
@@ -64,7 +72,7 @@
       .hero-icon { width: 168px; height: 168px; border-radius: 38px; box-shadow: 0 12px 40px rgba(149, 100, 36, 0.22); }
       .actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
       .badge { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; background: var(--fg); color: var(--bg); font-weight: 600; font-size: 15px; }
-      .badge svg { width: 18px; height: 18px; fill: currentColor; }
+      .platforms { color: var(--muted); font-size: 15px; }
       .button { display: inline-block; padding: 10px 16px; border-radius: 999px; border: 1px solid var(--line); color: var(--fg); text-decoration: none; font-weight: 600; font-size: 15px; background: var(--card); }
 
       section { padding: 48px 0; border-top: 1px solid var(--line); }
@@ -76,6 +84,7 @@
       .card h3 { margin: 12px 0 6px; font-size: 17px; }
       .card p { margin: 0; color: var(--muted); font-size: 15px; }
       .icon { width: 40px; height: 40px; border-radius: 12px; background: var(--accent-soft); display: grid; place-items: center; }
+      .icon svg .dots { stroke-width: 2.6; }
       .icon svg { width: 22px; height: 22px; stroke: var(--accent); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 
       a.card { color: inherit; text-decoration: none; transition: border-color .15s, transform .15s; }
@@ -84,6 +93,7 @@
       .tour { display: grid; gap: 56px; }
       .feature { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; scroll-margin-top: 24px; }
       .feature:nth-child(even) .mock { order: -1; }
+      .feature > * { min-width: 0; }
       .feature h3 { font-size: 24px; letter-spacing: -0.01em; margin: 0 0 6px; }
       .feature .kicker { color: var(--accent); font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: .06em; margin: 0 0 6px; }
       .feature p.sub { color: var(--muted); margin: 0 0 16px; }
@@ -106,18 +116,34 @@
       .tile.sketch svg { width: 100%; height: 60px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; }
       .check { display: flex; gap: 10px; align-items: center; font-size: 15px; }
       .check i { width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--accent); flex: none; }
+      .check i { display: grid; place-items: center; border-color: var(--line); }
       .check.done i { background: var(--accent-strong); border-color: var(--accent-strong); }
-      .check.done { color: var(--muted); text-decoration: line-through; }
+      .check.done { color: color-mix(in srgb, var(--fg) 50%, transparent); }
+      .check.done i::after { content: ''; width: 8px; height: 4px; margin-top: -2px; border-left: 2px solid var(--on-accent); border-bottom: 2px solid var(--on-accent); transform: rotate(-45deg); }
       .note-title { font-weight: 700; font-size: 17px; }
+      .btns { display: flex; flex-wrap: wrap; gap: 8px; }
+      .btns span { flex: 1 1 auto; text-align: center; padding: 8px 10px; border-radius: 12px; font-size: 13px; font-weight: 600; border: 1px solid var(--line); }
+      .btns .primary { background: var(--accent-strong); color: var(--on-accent); border-color: transparent; }
+      .toggle { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 14px; }
+      .toggle i { flex: none; position: relative; width: 44px; height: 26px; border-radius: 13px; background: var(--accent-strong); }
+      .toggle i::after { content: ''; position: absolute; top: 3px; right: 3px; width: 20px; height: 20px; border-radius: 50%; background: #fff; }
       .chip { align-self: flex-start; font-size: 12px; padding: 2px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-weight: 600; }
       .timeline { display: grid; grid-template-columns: 44px 1fr; row-gap: 6px; font-size: 13px; color: var(--muted); }
       .timeline .slot { border-top: 1px solid var(--line); min-height: 34px; position: relative; }
       .event { position: absolute; inset: 4px 0 auto 0; background: var(--accent-soft); border-left: 3px solid var(--accent-strong); border-radius: 6px; padding: 4px 8px; color: var(--fg); font-size: 13px; }
       .now { border-top: 2px solid #d94a3a; }
-      .msg { align-self: flex-end; background: var(--soft); border-radius: 14px; padding: 8px 12px; font-size: 14px; max-width: 85%; }
-      .msg small { display: block; color: var(--muted); font-size: 11px; text-align: right; }
-      .msg.link { border: 1px solid var(--line); background: var(--card); }
-      .msg.link b { color: var(--accent); }
+      .jrow { display: flex; align-items: flex-end; justify-content: flex-end; gap: 8px; }
+      .jrow small { color: var(--muted); font-size: 11px; flex: none; }
+      .msg { background: var(--soft); border-radius: 16px; padding: 8px 12px; font-size: 14px; max-width: 82%; display: flex; flex-direction: column; gap: 6px; }
+      .msg.wide { min-width: 66%; }
+      .ref { background: var(--card); border-radius: 10px; padding: 6px 10px; border-left: 2px solid var(--accent-strong); }
+      .ref b { display: block; font-size: 13px; }
+      .ref span { color: var(--muted); font-size: 12px; }
+      .msg.voice { flex-direction: row; align-items: center; gap: 10px; color: var(--muted); font-size: 12px; }
+      .msg.voice i { width: 28px; height: 28px; border-radius: 50%; background: var(--accent-strong); flex: none; }
+      .msg.voice i { display: grid; place-items: center; }
+      .msg.voice i::after { content: ''; margin-left: 3px; border-style: solid; border-width: 6px 0 6px 10px; border-color: transparent transparent transparent var(--on-accent); }
+      .wave { flex: 1; height: 18px; fill: var(--accent); opacity: .7; }
       .sheet { width: 100%; border-collapse: collapse; font-size: 13px; }
       .sheet th, .sheet td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; }
       .sheet th { background: var(--soft); color: var(--muted); font-weight: 600; }
@@ -130,6 +156,10 @@
       }
       .code b { color: var(--accent); font-weight: 600; }
 
+      .lang { display: flex; gap: 4px; font-size: 13px; }
+      .lang a { color: var(--muted); text-decoration: none; padding: 2px 6px; border-radius: 6px; }
+      .lang a[aria-current] { color: var(--fg); font-weight: 700; background: var(--soft); }
+      footer .lang { width: 100%; flex-wrap: wrap; }
       .points { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin: 0; padding: 0; list-style: none; }
       .points li { background: var(--soft); border-radius: 16px; padding: 16px 20px; }
       .points strong { display: block; margin-bottom: 4px; }
@@ -151,26 +181,49 @@
       footer .links { display: flex; flex-wrap: wrap; gap: 20px; }
       footer a { color: var(--muted); }
 
+      @media (min-width: 721px) and (max-width: 1000px) {
+        .nav-links { gap: 14px; font-size: 14px; }
+        .nav-links .lang { display: none; }
+      }
       @media (max-width: 720px) {
-        .nav-links { display: none; }
+        nav { display: none; }
+        .badge { width: 100%; justify-content: center; padding: 14px 16px; }
+        .platforms { width: 100%; text-align: center; }
         .hero { grid-template-columns: 1fr; padding-top: 24px; gap: 24px; }
         .hero-icon { width: 96px; height: 96px; border-radius: 22px; order: -1; }
         .hero h1 { font-size: 36px; }
+        .card { display: grid; grid-template-columns: 40px 1fr; column-gap: 12px; align-items: center; padding: 16px 20px; }
+        .card h3 { margin: 0; }
+        .card p { grid-column: 1 / -1; margin-top: 10px; }
         .feature { grid-template-columns: 1fr; gap: 20px; }
         .feature:nth-child(even) .mock { order: 0; }
         section h2 { font-size: 24px; }
       }
     </style>
+    <script>
+      (() => {
+        const langs = ["en", "ru", "de", "uk", "fr", "es"];
+        let saved = null;
+        try { saved = localStorage.getItem('lang'); } catch (e) {}
+        if (saved || document.documentElement.lang !== 'en') return;
+        const wanted = (navigator.languages || [navigator.language || 'en'])
+          .map((l) => l.toLowerCase().split('-')[0])
+          .find((l) => langs.includes(l));
+        if (wanted && wanted !== 'en') location.replace('/' + wanted + '/' + location.hash);
+      })();
+    </script>
   </head>
   <body>
     <div class="wrap">
       <nav>
-        <a class="brand" href="/"><img src="apple-touch-icon.png" alt="" />Mind Hub</a>
+        <a class="brand" href="/"><img src="/apple-touch-icon.png" alt="" />Mind Hub</a>
         <div class="nav-links">
           <a href="#features">Features</a>
           <a href="#tour">Tour</a>
           <a href="#privacy">Privacy</a>
           <a href="#support">Support</a>
+          <a class="button" href="#support">Get help</a>
+          <div class="lang"><a href="/" hreflang="en" lang="en" data-lang="en" title="English" aria-current="true">EN</a><a href="/ru/" hreflang="ru" lang="ru" data-lang="ru" title="Русский">RU</a><a href="/de/" hreflang="de" lang="de" data-lang="de" title="Deutsch">DE</a><a href="/uk/" hreflang="uk" lang="uk" data-lang="uk" title="Українська">UK</a><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr" title="Français">FR</a><a href="/es/" hreflang="es" lang="es" data-lang="es" title="Español">ES</a></div>
         </div>
       </nav>
 
@@ -183,13 +236,12 @@
           </p>
           <div class="actions">
             <span class="badge">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.3 1.2 9.7.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.6-1-2.6-3.8zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg>
               Coming soon to the App Store
             </span>
-            <a class="button" href="#support">Get help</a>
+            <span class="platforms">For iPhone and iPad</span>
           </div>
         </div>
-        <img class="hero-icon" src="apple-touch-icon.png" alt="Mind Hub app icon" />
+        <img class="hero-icon" src="/apple-touch-icon.png" alt="Mind Hub app icon" />
       </header>
 
       <section id="features">
@@ -197,14 +249,14 @@
         <p class="section-lead">Each part works on its own, and the AI chat connects them.</p>
         <div class="grid">
           <a class="card" href="#chat">
-            <div class="icon"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 11h.01M12 11h.01M15 11h.01"/></svg></div>
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1-4.6A8 8 0 1 1 21 12z"/><path class="dots" d="M9.5 12h.01M13 12h.01M16.5 12h.01"/></svg></div>
             <h3>AI chat</h3>
-            <p>Ask about your notes and plans. Attach notes, projects, photos, files or voice. The assistant can draft notes, projects and tables or update diary pages — nothing is saved until you tap.</p>
+            <p>Ask about your notes and plans. Attach notes, projects, tables, photos or files, or dictate by voice. The assistant can draft notes, projects and tables or update diary pages — nothing is saved until you tap.</p>
           </a>
           <a class="card" href="#diary">
             <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h6M8 11h6"/></svg></div>
             <h3>Diary</h3>
-            <p>A page for every day: text, images, drawings and blocks on a grid, templates and a photo of the day. Share a page as an image.</p>
+            <p>Your day, your layout: write, draw and drop in photos anywhere on the grid, start from a template and change anything. Share a page as an image.</p>
           </a>
           <a class="card" href="#notes">
             <div class="icon"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12l2 2 4-4M9 17h6"/></svg></div>
@@ -214,7 +266,7 @@
           <a class="card" href="#calendar">
             <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
             <h3>Calendar</h3>
-            <p>Year and month views with a day timeline. Timed and repeating notes, events from your phone's calendar, add a note to your calendar.</p>
+            <p>Year and month views with a day timeline. Timed and repeating notes, events from your device’s calendar, add a note to your calendar.</p>
           </a>
           <a class="card" href="#journal">
             <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v12H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg></div>
@@ -224,7 +276,7 @@
           <a class="card" href="#projects">
             <div class="icon"><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg></div>
             <h3>Projects</h3>
-            <p>Build small web pages in HTML, CSS and JavaScript and run them right on your phone.</p>
+            <p>Build small web pages in HTML, CSS and JavaScript and run them right on your iPhone or iPad.</p>
           </a>
           <a class="card" href="#tables">
             <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg></div>
@@ -234,7 +286,7 @@
           <a class="card" href="#backup">
             <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 17v3h16v-3"/></svg></div>
             <h3>Backup &amp; more</h3>
-            <p>Export everything to one file and restore it on a new phone. Reminders, dark mode and six languages.</p>
+            <p>Export everything to one file and restore it on a new device. Reminders, dark mode and six languages.</p>
           </a>
         </div>
       </section>
@@ -250,7 +302,7 @@
               <h3>An assistant that works with your notes</h3>
               <p class="sub">Talk to it like a person — it reads what you share and prepares changes you approve.</p>
               <ul class="ticks">
-                <li><strong>Attach anything:</strong> notes, projects, tables, photos, camera shots, files, voice.</li>
+                <li><strong>Attach anything:</strong> notes, projects, tables, photos, camera shots and files.</li>
                 <li><strong>It does the work:</strong> creates notes, projects and tables, updates diary pages — saved only when you tap.</li>
                 <li><strong>Full control:</strong> stop, copy, regenerate or edit a message and flip between versions.</li>
                 <li><strong>Dictation</strong> and a history of all your chats.</li>
@@ -259,15 +311,15 @@
             <div class="mock" aria-hidden="true">
               <div class="bubble me">Make a packing list for the weekend trip from my notes</div>
               <div class="bubble ai">Here is a checklist based on “Trip plans”. Save it as a new note?</div>
-              <div class="proposal"><b>Weekend packing</b>12 items · checklist<br /><span>Save note</span></div>
+              <div class="proposal"><b>Weekend packing</b>+12 lines · checklist<br /><span>Save as a note</span></div>
             </div>
           </div>
 
           <div class="feature" id="diary">
             <div>
               <p class="kicker">Diary</p>
-              <h3>A page for every day</h3>
-              <p class="sub">Write, paste and draw freely on a grid — your day, your layout.</p>
+              <h3>Your day, your layout</h3>
+              <p class="sub">Start from a blank grid or a template, then change anything — tomorrow’s page can look nothing like today’s.</p>
               <ul class="ticks">
                 <li><strong>Blocks on a grid:</strong> text, styled text, images, drawings, projects and floating text.</li>
                 <li><strong>Templates:</strong> pick one, edit it or save your own.</li>
@@ -276,12 +328,12 @@
               </ul>
             </div>
             <div class="mock" aria-hidden="true">
-              <div class="page-head"><b>Wednesday, 11 November</b><span>Page 1</span></div>
+              <div class="page-head"><b>Wednesday, 11 November</b></div>
               <div class="page-grid">
                 <div class="tile">Morning run, 5 km. Finally finished the landing page. Coffee with Anna at 4.</div>
                 <div class="tile photo"></div>
+                <div class="tile check done"><i></i>Read 30 pages</div>
                 <div class="tile sketch"><svg viewBox="0 0 200 60"><path d="M5 45 C40 5, 70 55, 100 25 S160 10, 195 40"/></svg></div>
-                <div class="tile">Mood: ☀️</div>
               </div>
             </div>
           </div>
@@ -295,7 +347,7 @@
                 <li><strong>Formatting:</strong> fonts, sizes, colours, background, checklists and numbered lists.</li>
                 <li><strong>Project notes</strong> with photos, files, video, audio, drawings, tables and embedded projects.</li>
                 <li><strong>Folders</strong> with drag and drop, search and filters.</li>
-                <li><strong>Reminders</strong> and export to Markdown, Word or PDF.</li>
+                <li><strong>Reminders</strong> and export: text notes to Markdown, project notes to Word or PDF.</li>
               </ul>
             </div>
             <div class="mock" aria-hidden="true">
@@ -311,13 +363,13 @@
           <div class="feature" id="calendar">
             <div>
               <p class="kicker">Calendar</p>
-              <h3>Your days and notes side by side</h3>
+              <h3>Your days and notes side by&nbsp;side</h3>
               <p class="sub">See the year at a glance, then plan the day hour by hour.</p>
               <ul class="ticks">
                 <li><strong>Year and month views</strong> with a day timeline and a live “now” line.</li>
                 <li><strong>Timed and repeating notes</strong> — daily, monthly or yearly.</li>
-                <li><strong>Your phone's calendar events</strong> beside your notes, if you turn it on.</li>
-                <li><strong>Add a note to your calendar</strong> and get a reminder before it starts.</li>
+                <li><strong>Your device’s calendar events</strong> beside your notes, if you turn them on.</li>
+                <li><strong>Add a note to your device’s calendar</strong> as an event, from the note’s menu.</li>
               </ul>
             </div>
             <div class="mock" aria-hidden="true">
@@ -344,9 +396,9 @@
               </ul>
             </div>
             <div class="mock" aria-hidden="true">
-              <div class="msg">Idea: a reading tracker table for 2027<small>09:41</small></div>
-              <div class="msg link"><b>↗ Reading list</b> · table<small>09:42</small></div>
-              <div class="msg">🎙 Voice note · 0:24<small>09:45</small></div>
+              <div class="jrow"><small>09:41</small><div class="msg">Idea: a reading tracker table for 2027</div></div>
+              <div class="jrow"><small>09:42</small><div class="msg wide"><div class="ref"><b>Reading list</b><span>Table · 3 sheets</span></div>Started it, first ten books in</div></div>
+              <div class="jrow"><small>09:45</small><div class="msg wide voice"><i></i><svg class="wave" viewBox="0 0 150 18" preserveAspectRatio="none"><rect x="0" y="7.0" width="2.5" height="4" rx="1.2"/><rect x="5" y="5.5" width="2.5" height="7" rx="1.2"/><rect x="10" y="4.0" width="2.5" height="10" rx="1.2"/><rect x="15" y="6.0" width="2.5" height="6" rx="1.2"/><rect x="20" y="3.0" width="2.5" height="12" rx="1.2"/><rect x="25" y="1.5" width="2.5" height="15" rx="1.2"/><rect x="30" y="4.5" width="2.5" height="9" rx="1.2"/><rect x="35" y="6.5" width="2.5" height="5" rx="1.2"/><rect x="40" y="5.0" width="2.5" height="8" rx="1.2"/><rect x="45" y="2.5" width="2.5" height="13" rx="1.2"/><rect x="50" y="1.0" width="2.5" height="16" rx="1.2"/><rect x="55" y="3.5" width="2.5" height="11" rx="1.2"/><rect x="60" y="5.5" width="2.5" height="7" rx="1.2"/><rect x="65" y="7.0" width="2.5" height="4" rx="1.2"/><rect x="70" y="6.0" width="2.5" height="6" rx="1.2"/><rect x="75" y="4.0" width="2.5" height="10" rx="1.2"/><rect x="80" y="2.0" width="2.5" height="14" rx="1.2"/><rect x="85" y="3.0" width="2.5" height="12" rx="1.2"/><rect x="90" y="5.0" width="2.5" height="8" rx="1.2"/><rect x="95" y="6.5" width="2.5" height="5" rx="1.2"/><rect x="100" y="4.5" width="2.5" height="9" rx="1.2"/><rect x="105" y="2.5" width="2.5" height="13" rx="1.2"/><rect x="110" y="4.0" width="2.5" height="10" rx="1.2"/><rect x="115" y="6.0" width="2.5" height="6" rx="1.2"/><rect x="120" y="7.0" width="2.5" height="4" rx="1.2"/><rect x="125" y="5.5" width="2.5" height="7" rx="1.2"/><rect x="130" y="3.5" width="2.5" height="11" rx="1.2"/><rect x="135" y="5.0" width="2.5" height="8" rx="1.2"/><rect x="140" y="6.5" width="2.5" height="5" rx="1.2"/><rect x="145" y="7.5" width="2.5" height="3" rx="1.2"/></svg>0:24</div></div>
             </div>
           </div>
 
@@ -379,7 +431,7 @@ document.getElementById('go')
               <h3>Spreadsheets that feel familiar</h3>
               <p class="sub">Formulas, sheets and charts that behave the way you expect from Excel.</p>
               <ul class="ticks">
-                <li><strong>37 formulas</strong>, references across sheets, fill handle, sort and filters.</li>
+                <li><strong>37 functions</strong>, references across sheets, fill handle, sort and filters.</li>
                 <li><strong>Cell styles,</strong> number formats, merged cells, find and replace, undo.</li>
                 <li><strong>Charts:</strong> bar, line, area and pie, with several series and trend lines.</li>
                 <li><strong>Export to Excel</strong> with real charts, or a chart as a picture.</li>
@@ -400,19 +452,19 @@ document.getElementById('go')
             <div>
               <p class="kicker">Backup &amp; settings</p>
               <h3>Yours to keep</h3>
-              <p class="sub">Your data lives on your phone, and moving it is one file.</p>
+              <p class="sub">Your data lives on your device, and moving it is one file.</p>
               <ul class="ticks">
-                <li><strong>Backup to a single file</strong> — notes, diary, journal, projects, media and settings.</li>
-                <li><strong>Restore</strong> on a new phone or after reinstalling.</li>
+                <li><strong>Backup to a single file</strong> — notes, diary, journal, projects, tables, media and settings.</li>
+                <li><strong>Restore</strong> on a new device or after reinstalling.</li>
                 <li><strong>Reminders</strong> for timed notes and gentle daily nudges, all optional.</li>
                 <li><strong>Light and dark themes,</strong> 12/24-hour time, six languages.</li>
               </ul>
             </div>
             <div class="mock" aria-hidden="true">
               <div class="note-title">Backup</div>
-              <div class="tile">📦 Mind Hub backup<br /><span style="color:var(--muted)">Notes · Diary · Journal · Projects · Media</span></div>
-              <div class="check done"><i></i>Exported</div>
-              <div class="check"><i></i>Restore on a new phone</div>
+              <div class="tile">Last backup: today, 09:41<br /><span style="color:var(--muted)">Notes · Diary · Journal · Projects · Tables</span></div>
+              <div class="toggle">Include photos, video and audio<i></i></div>
+              <div class="btns"><span class="primary">Save as a file</span><span>Restore from file</span></div>
             </div>
           </div>
 
@@ -421,11 +473,11 @@ document.getElementById('go')
 
       <section id="privacy">
         <h2>Your data, your device</h2>
-        <p class="section-lead">The short version of our <a href="privacy/">Privacy Policy</a>.</p>
+        <p class="section-lead">The short version of our <a href="/privacy/">Privacy Policy</a>.</p>
         <ul class="points">
-          <li><strong>Stored on your phone</strong><span>Notes, diary, journal, projects and tables live on your device. Use Backup to keep a copy.</span></li>
-          <li><strong>AI only with your permission</strong><span>The chat sends what you write or attach to our server and to Anthropic's Claude model — only after you allow it. You can withdraw it in Settings → Privacy.</span></li>
-          <li><strong>No ads, no selling</strong><span>We don't show ads, sell your data or track you across other companies' apps and websites.</span></li>
+          <li><strong>Stored on your device</strong><span>Notes, diary, journal, projects and tables live on your device. Use Backup to keep a copy. Your AI chat history is also stored on our server.</span></li>
+          <li><strong>AI only with your permission</strong><span>The chat sends what you write or attach to our server and to Anthropic’s Claude model — only after you allow it. You can withdraw it in Settings → Privacy.</span></li>
+          <li><strong>No ads, no selling</strong><span>We don’t show ads, sell your data or track you across other companies’ apps and websites.</span></li>
         </ul>
       </section>
 
@@ -433,26 +485,26 @@ document.getElementById('go')
         <h2>Free and paid plans</h2>
         <p class="section-lead">
           Mind Hub is free to use, including the AI chat with a usage allowance. Plus, Pro and Max are
-          auto-renewable subscriptions that raise the AI allowance and the number of projects, tables and
-          project notes. Prices are shown in the app before you subscribe.
+          auto-renewable subscriptions that raise the AI allowance and lift the limit on project notes;
+          Pro and Max also allow more projects and tables. Prices are shown in the app before you subscribe.
         </p>
         <ul class="points">
-          <li><strong>Manage or cancel</strong><span>On iPhone: Settings → your name → Subscriptions. Cancel at least 24 hours before the period ends to avoid renewal.</span></li>
-          <li><strong>Restore purchases</strong><span>On a new phone, sign in and tap Restore purchases on the Subscription screen.</span></li>
-          <li><strong>Terms</strong><span>Using Mind Hub means accepting our <a href="terms/">Terms of Use</a> and <a href="privacy/">Privacy Policy</a>.</span></li>
+          <li><strong>Manage or cancel</strong><span>On iPhone or iPad: Settings → your name → Subscriptions. Cancel at least 24 hours before the period ends to avoid renewal.</span></li>
+          <li><strong>Restore purchases</strong><span>On a new device, sign in and tap Restore purchases on the Subscription screen.</span></li>
+          <li><strong>Terms</strong><span>Using Mind Hub means accepting our <a href="/terms/">Terms of Use</a> and <a href="/privacy/">Privacy Policy</a>.</span></li>
         </ul>
       </section>
 
       <section id="support">
         <h2>Support</h2>
-        <p class="section-lead">Answers to common questions. Can't find yours? Write to us.</p>
+        <p class="section-lead">Answers to common questions. Can’t find yours? Write to us.</p>
         <details>
-          <summary>How do I move my notes to a new phone?</summary>
-          <p>Open Account → Backup and export a backup file. On the new phone, sign in and restore it from the same screen.</p>
+          <summary>How do I move my notes to a new device?</summary>
+          <p>Open Account → Backup and export a backup file. On the new device, sign in and restore it from the same screen.</p>
         </details>
         <details>
           <summary>Why does the AI chat ask for permission?</summary>
-          <p>To answer, the chat sends your messages and attachments to our server and to Anthropic. We ask before anything is sent; you can withdraw it in Settings → Privacy.</p>
+          <p>To answer, the chat sends your messages and attachments to our server and to Anthropic. We ask before anything is sent, and you can turn it off any time in Settings → Privacy.</p>
         </details>
         <details>
           <summary>I reached the AI limit. What now?</summary>
@@ -467,8 +519,8 @@ document.getElementById('go')
           <p>
             In the app open Account → Delete account and confirm. This deletes your account, chats, messages,
             attached files, usage and subscription records from our server, and the data stored on that device.
-            Can't open the app? Email <a href="mailto:support@mymindhub.app">support@mymindhub.app</a> from your
-            account's address. Deleting the account does not cancel a subscription — cancel it in your store settings.
+            Can’t open the app? Email <a href="mailto:support@mymindhub.app">support@mymindhub.app</a> from your
+            account’s address. Deleting the account does not cancel a subscription — cancel it in your App Store subscriptions.
           </p>
         </details>
 
@@ -482,14 +534,28 @@ document.getElementById('go')
       </section>
 
       <footer>
-        <div>© 2026 Ivan Tsukylo</div>
+        <div>© 2026 Mind Hub</div>
         <div class="links">
-          <a href="privacy/">Privacy Policy</a>
-          <a href="terms/">Terms of Use</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Use</a>
           <a href="#delete-account">Delete account</a>
           <a href="mailto:support@mymindhub.app">Contact</a>
         </div>
+        <div class="lang"><a href="/" hreflang="en" lang="en" data-lang="en" title="English" aria-current="true">EN</a><a href="/ru/" hreflang="ru" lang="ru" data-lang="ru" title="Русский">RU</a><a href="/de/" hreflang="de" lang="de" data-lang="de" title="Deutsch">DE</a><a href="/uk/" hreflang="uk" lang="uk" data-lang="uk" title="Українська">UK</a><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr" title="Français">FR</a><a href="/es/" hreflang="es" lang="es" data-lang="es" title="Español">ES</a></div>
       </footer>
     </div>
+    <script>
+      const openTarget = () => {
+        const el = location.hash && document.getElementById(location.hash.slice(1));
+        if (el && el.tagName === 'DETAILS') { el.open = true; el.scrollIntoView({ block: 'start' }); }
+      };
+      addEventListener('hashchange', openTarget);
+      openTarget();
+    </script>
+    <script>
+      document.querySelectorAll('.lang a').forEach((a) => a.addEventListener('click', () => {
+        try { localStorage.setItem('lang', a.dataset.lang); } catch (e) {}
+      }));
+    </script>
   </body>
 </html>
