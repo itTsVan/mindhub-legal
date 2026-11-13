@@ -136,7 +136,7 @@
       <main class="prose">
         <h1>Условия использования Mind Hub</h1>
         <p class="muted">Действуют с 12&nbsp;ноября 2026&nbsp;г.</p>
-        <p class="note">Это перевод. Если он расходится с <a href="/terms/">английской версией</a>, действует английская версия.</p>
+        <p class="note">Это перевод. Если он расходится с <a href="/terms/" hreflang="en" data-lang="en">английской версией</a>, действует английская версия.</p>
         <details class="toc" open><summary>Содержание</summary><ol><li><a href="#who-we-are">Кто мы</a></li><li><a href="#the-service">Сервис</a></li><li><a href="#eligibility">Право на использование</a></li><li><a href="#your-account">Ваш аккаунт</a></li><li><a href="#acceptable-use">Допустимое использование</a></li><li><a href="#ai-output">Ответы ИИ</a></li><li><a href="#reporting-ai-replies">Жалобы на ответы ИИ</a></li><li><a href="#your-content">Ваш контент</a></li><li><a href="#subscriptions-and-payments">Подписки и платежи</a></li><li><a href="#free-plan-limits-and-fair-use">Бесплатный план, ограничения и добросовестное использование</a></li><li><a href="#deleting-your-account">Удаление аккаунта</a></li><li><a href="#suspension-and-termination">Приостановка и прекращение доступа</a></li><li><a href="#changes-to-the-service-and-these-terms">Изменения сервиса и настоящих условий</a></li><li><a href="#disclaimer-of-warranties">Отказ от гарантий</a></li><li><a href="#limitation-of-liability">Ограничение ответственности</a></li><li><a href="#governing-law">Применимое право</a></li><li><a href="#apple-specific-terms">Условия, касающиеся Apple</a></li><li><a href="#contact">Контакты</a></li></ol></details>
 
         <p>
@@ -461,7 +461,7 @@
       </footer>
     </div>
     <script>
-      document.querySelectorAll('.lang a').forEach((a) => a.addEventListener('click', () => {
+      document.querySelectorAll('a[data-lang]').forEach((a) => a.addEventListener('click', () => {
         try { localStorage.setItem('lang', a.dataset.lang); } catch (e) {}
       }));
     </script>

@@ -136,7 +136,7 @@
       <main class="prose">
         <h1>Política de privacidad de Mind Hub</h1>
         <p class="muted">Vigente desde el 12 de noviembre de 2026</p>
-        <p class="note">Esta es una traducción. Si difiere de la <a href="/privacy/">versión en inglés</a>, prevalece la versión en inglés.</p>
+        <p class="note">Esta es una traducción. Si difiere de la <a href="/privacy/" hreflang="en" data-lang="en">versión en inglés</a>, prevalece la versión en inglés.</p>
         <details class="toc" open><summary>Índice</summary><ol><li><a href="#who-is-responsible">Responsable del tratamiento</a></li><li><a href="#what-stays-on-your-device">Lo que permanece en tu dispositivo</a></li><li><a href="#what-we-collect">Qué datos recopilamos</a></li><li><a href="#who-else-receives-your-data">Quién más recibe tus datos</a></li><li><a href="#legal-basis">Base jurídica</a></li><li><a href="#how-long-we-keep-it">Cuánto tiempo los conservamos</a></li><li><a href="#deleting-your-account">Eliminar tu cuenta</a></li><li><a href="#your-rights">Tus derechos</a></li><li><a href="#children">Menores</a></li><li><a href="#changes">Cambios</a></li></ol></details>
 
         <p>
@@ -503,7 +503,7 @@
       </footer>
     </div>
     <script>
-      document.querySelectorAll('.lang a').forEach((a) => a.addEventListener('click', () => {
+      document.querySelectorAll('a[data-lang]').forEach((a) => a.addEventListener('click', () => {
         try { localStorage.setItem('lang', a.dataset.lang); } catch (e) {}
       }));
     </script>

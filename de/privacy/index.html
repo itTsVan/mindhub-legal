@@ -136,7 +136,7 @@
       <main class="prose">
         <h1>Datenschutzerklärung von Mind Hub</h1>
         <p class="muted">Gültig ab 12. November 2026</p>
-        <p class="note">Dies ist eine Übersetzung. Bei Abweichungen gilt die <a href="/privacy/">englische Fassung</a>.</p>
+        <p class="note">Dies ist eine Übersetzung. Bei Abweichungen gilt die <a href="/privacy/" hreflang="en" data-lang="en">englische Fassung</a>.</p>
         <details class="toc" open><summary>Inhalt</summary><ol><li><a href="#who-is-responsible">Verantwortlicher</a></li><li><a href="#what-stays-on-your-device">Was auf deinem Gerät bleibt</a></li><li><a href="#what-we-collect">Welche Daten wir erheben</a></li><li><a href="#who-else-receives-your-data">Wer deine Daten außerdem erhält</a></li><li><a href="#legal-basis">Rechtsgrundlage</a></li><li><a href="#how-long-we-keep-it">Wie lange wir Daten speichern</a></li><li><a href="#deleting-your-account">Löschen deines Kontos</a></li><li><a href="#your-rights">Deine Rechte</a></li><li><a href="#children">Kinder</a></li><li><a href="#changes">Änderungen</a></li></ol></details>
 
         <p>
@@ -508,7 +508,7 @@
       </footer>
     </div>
     <script>
-      document.querySelectorAll('.lang a').forEach((a) => a.addEventListener('click', () => {
+      document.querySelectorAll('a[data-lang]').forEach((a) => a.addEventListener('click', () => {
         try { localStorage.setItem('lang', a.dataset.lang); } catch (e) {}
       }));
     </script>

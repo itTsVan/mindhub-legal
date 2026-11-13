@@ -136,7 +136,7 @@
       <main class="prose">
         <h1>Умови використання Mind Hub</h1>
         <p class="muted">Набирають чинності 12 листопада 2026 р.</p>
-        <p class="note">Це переклад. Якщо він розходиться з <a href="/terms/">англійською версією</a>, чинною є англійська версія.</p>
+        <p class="note">Це переклад. Якщо він розходиться з <a href="/terms/" hreflang="en" data-lang="en">англійською версією</a>, чинною є англійська версія.</p>
         <details class="toc" open><summary>Зміст</summary><ol><li><a href="#who-we-are">Хто ми</a></li><li><a href="#the-service">Сервіс</a></li><li><a href="#eligibility">Вимоги до користувачів</a></li><li><a href="#your-account">Ваш акаунт</a></li><li><a href="#acceptable-use">Допустиме використання</a></li><li><a href="#ai-output">Результати роботи ШІ</a></li><li><a href="#reporting-ai-replies">Скарги на відповіді ШІ</a></li><li><a href="#your-content">Ваш контент</a></li><li><a href="#subscriptions-and-payments">Підписки та оплата</a></li><li><a href="#free-plan-limits-and-fair-use">Безкоштовний план, обмеження та розумне використання</a></li><li><a href="#deleting-your-account">Видалення акаунта</a></li><li><a href="#suspension-and-termination">Призупинення та припинення</a></li><li><a href="#changes-to-the-service-and-these-terms">Зміни сервісу та цих умов</a></li><li><a href="#disclaimer-of-warranties">Відмова від гарантій</a></li><li><a href="#limitation-of-liability">Обмеження відповідальності</a></li><li><a href="#governing-law">Застосовне право</a></li><li><a href="#apple-specific-terms">Умови, що стосуються Apple</a></li><li><a href="#contact">Контакти</a></li></ol></details>
 
         <p>
@@ -453,7 +453,7 @@
       </footer>
     </div>
     <script>
-      document.querySelectorAll('.lang a').forEach((a) => a.addEventListener('click', () => {
+      document.querySelectorAll('a[data-lang]').forEach((a) => a.addEventListener('click', () => {
         try { localStorage.setItem('lang', a.dataset.lang); } catch (e) {}
       }));
     </script>

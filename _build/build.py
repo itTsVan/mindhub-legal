@@ -45,7 +45,7 @@ REDIRECT_SCRIPT = '''    <script>
 '''
 
 REMEMBER_SCRIPT = '''    <script>
-      document.querySelectorAll('.lang a').forEach((a) => a.addEventListener('click', () => {
+      document.querySelectorAll('a[data-lang]').forEach((a) => a.addEventListener('click', () => {
         try { localStorage.setItem('lang', a.dataset.lang); } catch (e) {}
       }));
     </script>
@@ -149,7 +149,8 @@ def render_legal(doc: str, lang: str, strings: dict) -> str:
            f'<ol>{toc_items}</ol></details>\n')
     note = ''
     if lang != 'en':
-        note = '  <p class="note">' + strings['legal.translationNote'].replace('{en}', f'/{doc}/') + '</p>\n'
+        note = '  <p class="note">' + strings['legal.translationNote'].replace(
+            '<a href="{en}">', f'<a href="/{doc}/" hreflang="en" data-lang="en">') + '</p>\n'
     body = re.sub(r'(<p class="muted">.*?</p>\n)', lambda m: m.group(1) + note + toc, body, count=1, flags=re.S)
     body = re.sub(r'(<table>.*?</table>)', r'<div class="table-scroll">\1</div>', body, flags=re.S)
     body = '\n'.join(('      ' + l) if l else l for l in body.rstrip('\n').split('\n'))

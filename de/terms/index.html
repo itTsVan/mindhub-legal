@@ -136,7 +136,7 @@
       <main class="prose">
         <h1>Nutzungsbedingungen von Mind Hub</h1>
         <p class="muted">Gültig ab 12. November 2026</p>
-        <p class="note">Dies ist eine Übersetzung. Bei Abweichungen gilt die <a href="/terms/">englische Fassung</a>.</p>
+        <p class="note">Dies ist eine Übersetzung. Bei Abweichungen gilt die <a href="/terms/" hreflang="en" data-lang="en">englische Fassung</a>.</p>
         <details class="toc" open><summary>Inhalt</summary><ol><li><a href="#who-we-are">Wer wir sind</a></li><li><a href="#the-service">Der Dienst</a></li><li><a href="#eligibility">Teilnahmevoraussetzungen</a></li><li><a href="#your-account">Dein Konto</a></li><li><a href="#acceptable-use">Zulässige Nutzung</a></li><li><a href="#ai-output">KI-Ausgaben</a></li><li><a href="#reporting-ai-replies">KI-Antworten melden</a></li><li><a href="#your-content">Deine Inhalte</a></li><li><a href="#subscriptions-and-payments">Abos und Zahlungen</a></li><li><a href="#free-plan-limits-and-fair-use">Kostenloser Tarif, Limits und faire Nutzung</a></li><li><a href="#deleting-your-account">Löschen deines Kontos</a></li><li><a href="#suspension-and-termination">Sperrung und Kündigung</a></li><li><a href="#changes-to-the-service-and-these-terms">Änderungen des Dienstes und dieser Bedingungen</a></li><li><a href="#disclaimer-of-warranties">Gewährleistungsausschluss</a></li><li><a href="#limitation-of-liability">Haftungsbeschränkung</a></li><li><a href="#governing-law">Anwendbares Recht</a></li><li><a href="#apple-specific-terms">Besondere Bestimmungen für Apple</a></li><li><a href="#contact">Kontakt</a></li></ol></details>
 
         <p>
@@ -456,7 +456,7 @@
       </footer>
     </div>
     <script>
-      document.querySelectorAll('.lang a').forEach((a) => a.addEventListener('click', () => {
+      document.querySelectorAll('a[data-lang]').forEach((a) => a.addEventListener('click', () => {
         try { localStorage.setItem('lang', a.dataset.lang); } catch (e) {}
       }));
     </script>

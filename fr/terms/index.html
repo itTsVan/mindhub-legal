@@ -136,7 +136,7 @@
       <main class="prose">
         <h1>Conditions d’utilisation de Mind Hub</h1>
         <p class="muted">En vigueur à compter du 12 novembre 2026</p>
-        <p class="note">Ceci est une traduction. En cas de divergence, la <a href="/terms/">version anglaise</a> fait foi.</p>
+        <p class="note">Ceci est une traduction. En cas de divergence, la <a href="/terms/" hreflang="en" data-lang="en">version anglaise</a> fait foi.</p>
         <details class="toc" open><summary>Sommaire</summary><ol><li><a href="#who-we-are">Qui sommes-nous</a></li><li><a href="#the-service">Le service</a></li><li><a href="#eligibility">Conditions d’accès</a></li><li><a href="#your-account">Votre compte</a></li><li><a href="#acceptable-use">Utilisation acceptable</a></li><li><a href="#ai-output">Contenus générés par l’IA</a></li><li><a href="#reporting-ai-replies">Signalement des réponses de l’IA</a></li><li><a href="#your-content">Vos contenus</a></li><li><a href="#subscriptions-and-payments">Abonnements et paiements</a></li><li><a href="#free-plan-limits-and-fair-use">Formule gratuite, limites et usage raisonnable</a></li><li><a href="#deleting-your-account">Suppression de votre compte</a></li><li><a href="#suspension-and-termination">Suspension et résiliation</a></li><li><a href="#changes-to-the-service-and-these-terms">Modifications du service et des présentes conditions</a></li><li><a href="#disclaimer-of-warranties">Exclusion de garanties</a></li><li><a href="#limitation-of-liability">Limitation de responsabilité</a></li><li><a href="#governing-law">Droit applicable</a></li><li><a href="#apple-specific-terms">Conditions propres à Apple</a></li><li><a href="#contact">Contact</a></li></ol></details>
 
         <p>
@@ -473,7 +473,7 @@
       </footer>
     </div>
     <script>
-      document.querySelectorAll('.lang a').forEach((a) => a.addEventListener('click', () => {
+      document.querySelectorAll('a[data-lang]').forEach((a) => a.addEventListener('click', () => {
         try { localStorage.setItem('lang', a.dataset.lang); } catch (e) {}
       }));
     </script>

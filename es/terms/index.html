@@ -136,7 +136,7 @@
       <main class="prose">
         <h1>Términos de uso de Mind Hub</h1>
         <p class="muted">Vigentes desde el 12 de noviembre de 2026</p>
-        <p class="note">Esta es una traducción. Si difiere de la <a href="/terms/">versión en inglés</a>, prevalece la versión en inglés.</p>
+        <p class="note">Esta es una traducción. Si difiere de la <a href="/terms/" hreflang="en" data-lang="en">versión en inglés</a>, prevalece la versión en inglés.</p>
         <details class="toc" open><summary>Índice</summary><ol><li><a href="#who-we-are">Quiénes somos</a></li><li><a href="#the-service">El servicio</a></li><li><a href="#eligibility">Requisitos de edad</a></li><li><a href="#your-account">Tu cuenta</a></li><li><a href="#acceptable-use">Uso aceptable</a></li><li><a href="#ai-output">Respuestas de la IA</a></li><li><a href="#reporting-ai-replies">Denunciar respuestas de la IA</a></li><li><a href="#your-content">Tu contenido</a></li><li><a href="#subscriptions-and-payments">Suscripciones y pagos</a></li><li><a href="#free-plan-limits-and-fair-use">Plan gratuito, límites y uso razonable</a></li><li><a href="#deleting-your-account">Eliminar tu cuenta</a></li><li><a href="#suspension-and-termination">Suspensión y terminación</a></li><li><a href="#changes-to-the-service-and-these-terms">Cambios en el servicio y en estos términos</a></li><li><a href="#disclaimer-of-warranties">Exclusión de garantías</a></li><li><a href="#limitation-of-liability">Limitación de responsabilidad</a></li><li><a href="#governing-law">Legislación aplicable</a></li><li><a href="#apple-specific-terms">Términos específicos de Apple</a></li><li><a href="#contact">Contacto</a></li></ol></details>
 
         <p>
@@ -451,7 +451,7 @@
       </footer>
     </div>
     <script>
-      document.querySelectorAll('.lang a').forEach((a) => a.addEventListener('click', () => {
+      document.querySelectorAll('a[data-lang]').forEach((a) => a.addEventListener('click', () => {
         try { localStorage.setItem('lang', a.dataset.lang); } catch (e) {}
       }));
     </script>
