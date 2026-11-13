@@ -155,5 +155,7 @@
   "footer.privacy": "Datenschutzerklärung",
   "footer.terms": "Nutzungsbedingungen",
   "footer.delete": "Konto löschen",
-  "footer.contact": "Kontakt"
+  "footer.contact": "Kontakt",
+  "legal.contents": "Inhalt",
+  "legal.translationNote": "Dies ist eine Übersetzung. Bei Abweichungen gilt die <a href=\"{en}\">englische Fassung</a>."
 }

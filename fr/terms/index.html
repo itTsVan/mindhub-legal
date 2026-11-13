@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Conditions d’utilisation de Mind Hub</title>
+    <meta name="description" content="Les présentes conditions constituent un contrat entre vous et le développeur de Mind Hub. En créant un compte ou en utilisant l’application, vous les acceptez. Si vous ne les acceptez pas, n’utilisez pas Mind Hub." />
+    <link rel="canonical" href="https://mymindhub.app/fr/terms/" />
+    <link rel="alternate" hreflang="en" href="https://mymindhub.app/terms/" />
+    <link rel="alternate" hreflang="ru" href="https://mymindhub.app/ru/terms/" />
+    <link rel="alternate" hreflang="de" href="https://mymindhub.app/de/terms/" />
+    <link rel="alternate" hreflang="uk" href="https://mymindhub.app/uk/terms/" />
+    <link rel="alternate" hreflang="fr" href="https://mymindhub.app/fr/terms/" />
+    <link rel="alternate" hreflang="es" href="https://mymindhub.app/es/terms/" />
+    <link rel="alternate" hreflang="x-default" href="https://mymindhub.app/terms/" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="color-scheme" content="light dark" />
+    <style>
+      :root {
+        --bg: #f6f4f3;
+        --card: #ffffff;
+        --soft: #f1ece9;
+        --fg: #1c1c1c;
+        --muted: #5c5a58;
+        --line: #e4ddd8;
+        --accent: #956424;
+        --accent-strong: #f1a23b;
+        --accent-soft: #fbf0ec;
+        --on-accent: #2f3131;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #2f3131;
+          --card: #393a3a;
+          --soft: #434545;
+          --fg: #e7e7e7;
+          --muted: #b9baba;
+          --line: #4d4f4f;
+          --accent: #f1a23b;
+          --accent-strong: #f1a23b;
+          --accent-soft: #3a2a18;
+          --on-accent: #2f3131;
+        }
+      }
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font: 16px/1.6 -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif;
+      }
+      a { color: var(--accent); text-underline-offset: 3px; }
+      .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+      nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; gap: 16px; }
+      .brand { display: flex; flex-shrink: 0; white-space: nowrap; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; color: var(--fg); text-decoration: none; }
+      .brand img { width: 32px; height: 32px; border-radius: 8px; }
+      .nav-links { display: flex; gap: 20px; font-size: 15px; align-items: center; }
+      .nav-links a { color: var(--muted); text-decoration: none; white-space: nowrap; }
+      .nav-links a:hover, .nav-links a[aria-current] { color: var(--fg); }
+      .button { display: inline-block; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); color: var(--fg); text-decoration: none; font-weight: 600; font-size: 15px; background: var(--card); }
+      .nav-links a.button { color: var(--fg); }
+
+      main.prose { margin: 0; padding: 24px 0 56px; overflow-wrap: anywhere; }
+      .prose h1 { font-size: 36px; line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 8px; }
+      .prose h2 { font-size: 21px; line-height: 1.3; letter-spacing: -0.01em; margin: 36px 0 8px; padding-top: 20px; border-top: 1px solid var(--line); scroll-margin-top: 16px; }
+      .prose h3 { font-size: 17px; line-height: 1.35; margin: 24px 0 6px; }
+      .prose ul, .prose ol { padding-left: 1.25em; }
+      .prose li + li { margin-top: 8px; }
+      .prose .muted { color: var(--muted); margin-top: 0; }
+      .note { background: var(--accent-soft); border-radius: 12px; padding: 12px 16px; font-size: 15px; margin: 16px 0; }
+      .toc { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 4px 20px; margin: 24px 0 8px; }
+      .toc summary { cursor: pointer; font-weight: 600; padding: 12px 0; list-style: none; display: flex; justify-content: space-between; }
+      .toc summary::-webkit-details-marker { display: none; }
+      .toc summary::after { content: '+'; color: var(--accent); font-weight: 400; font-size: 20px; line-height: 1; }
+      .toc[open] summary::after { content: '−'; }
+      .toc ol { margin: 0 0 14px; padding-left: 1.4em; columns: 2; column-gap: 32px; font-size: 15px; }
+      .toc li { break-inside: avoid; margin: 0 0 6px; }
+      .toc li + li { margin-top: 0; }
+      .toc a { text-decoration: none; }
+      .toc a:hover { text-decoration: underline; }
+      .prose table { width: 100%; border-collapse: collapse; font-size: 15px; }
+      .prose th, .prose td { text-align: left; vertical-align: top; padding: 8px 8px 8px 0; border-bottom: 1px solid var(--line); }
+      .prose th { color: var(--muted); font-weight: 600; }
+      .table-scroll { overflow-x: auto; }
+
+      footer { padding: 24px 0 40px; color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; border-top: 1px solid var(--line); }
+      footer .links { display: flex; flex-wrap: wrap; column-gap: 20px; }
+      footer a { color: var(--muted); display: inline-flex; align-items: center; min-height: 44px; }
+      footer a[aria-current] { color: var(--fg); }
+      .lang { display: flex; gap: 4px; font-size: 13px; }
+      .lang a { color: var(--muted); text-decoration: none; padding: 2px 6px; border-radius: 6px; min-height: 32px; }
+      .lang a[aria-current] { color: var(--fg); font-weight: 700; background: var(--soft); }
+      footer .lang { width: 100%; flex-wrap: wrap; }
+
+      @media (max-width: 1000px) {
+        .nav-links .lang { display: none; }
+      }
+      @media (max-width: 720px) {
+        nav { padding: 14px 0; }
+        .nav-links .text { display: none; }
+        .prose h1 { font-size: 28px; }
+        .toc ol { columns: 1; }
+      }
+      @media print {
+        nav, footer, .toc { display: none; }
+        a { color: inherit; }
+      }
+    </style>
+    <script>
+      (() => {
+        const langs = ["en", "ru", "de", "uk", "fr", "es"];
+        let saved = null;
+        try { saved = localStorage.getItem('lang'); } catch (e) {}
+        if (saved || document.documentElement.lang !== 'en') return;
+        const wanted = (navigator.languages || [navigator.language || 'en'])
+          .map((l) => l.toLowerCase().split('-')[0])
+          .find((l) => langs.includes(l));
+        if (wanted && wanted !== 'en') location.replace('/' + wanted + '/terms/' + location.hash);
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="/fr/"><img src="/apple-touch-icon.png" alt="" />Mind Hub</a>
+        <div class="nav-links">
+          <a class="text" href="/fr/privacy/">Politique de confidentialité</a>
+          <a class="text" href="/fr/terms/" aria-current="page">Conditions d’utilisation</a>
+          <a class="button" href="/fr/#support">Aide</a>
+          <div class="lang"><a href="/terms/" hreflang="en" lang="en" data-lang="en" title="English">EN</a><a href="/ru/terms/" hreflang="ru" lang="ru" data-lang="ru" title="Русский">RU</a><a href="/de/terms/" hreflang="de" lang="de" data-lang="de" title="Deutsch">DE</a><a href="/uk/terms/" hreflang="uk" lang="uk" data-lang="uk" title="Українська">UK</a><a href="/fr/terms/" hreflang="fr" lang="fr" data-lang="fr" title="Français" aria-current="true">FR</a><a href="/es/terms/" hreflang="es" lang="es" data-lang="es" title="Español">ES</a></div>
+        </div>
+      </nav>
+      <main class="prose">
+        <h1>Conditions d’utilisation de Mind Hub</h1>
+        <p class="muted">En vigueur à compter du 12 novembre 2026</p>
+        <p class="note">Ceci est une traduction. En cas de divergence, la <a href="/terms/">version anglaise</a> fait foi.</p>
+        <details class="toc" open><summary>Sommaire</summary><ol><li><a href="#who-we-are">Qui sommes-nous</a></li><li><a href="#the-service">Le service</a></li><li><a href="#eligibility">Conditions d’accès</a></li><li><a href="#your-account">Votre compte</a></li><li><a href="#acceptable-use">Utilisation acceptable</a></li><li><a href="#ai-output">Contenus générés par l’IA</a></li><li><a href="#reporting-ai-replies">Signalement des réponses de l’IA</a></li><li><a href="#your-content">Vos contenus</a></li><li><a href="#subscriptions-and-payments">Abonnements et paiements</a></li><li><a href="#free-plan-limits-and-fair-use">Formule gratuite, limites et usage raisonnable</a></li><li><a href="#deleting-your-account">Suppression de votre compte</a></li><li><a href="#suspension-and-termination">Suspension et résiliation</a></li><li><a href="#changes-to-the-service-and-these-terms">Modifications du service et des présentes conditions</a></li><li><a href="#disclaimer-of-warranties">Exclusion de garanties</a></li><li><a href="#limitation-of-liability">Limitation de responsabilité</a></li><li><a href="#governing-law">Droit applicable</a></li><li><a href="#apple-specific-terms">Conditions propres à Apple</a></li><li><a href="#contact">Contact</a></li></ol></details>
+
+        <p>
+          Les présentes conditions constituent un contrat entre vous et le
+          développeur de Mind Hub. En créant un compte ou en utilisant
+          l’application, vous les acceptez. Si vous ne les acceptez pas,
+          n’utilisez pas Mind Hub.
+        </p>
+
+        <h2 id="who-we-are">Qui sommes-nous</h2>
+        <p>
+          Mind Hub est développé par <strong>Ivan Tsukylo</strong>, entrepreneur
+          individuel (FOP) enregistré en Ukraine (« nous »). Vous pouvez nous
+          contacter à l’adresse
+          <a href="mailto:support@mymindhub.app">support@mymindhub.app</a>.
+        </p>
+
+        <h2 id="the-service">Le service</h2>
+        <p>
+          Mind Hub est une application de notes, de carnet, de journal, de
+          tableaux et de projets dotée d’un chat IA. Vos notes et vos autres
+          contenus sont stockés sur votre appareil ; le chat IA, votre compte et
+          votre formule sont fournis par l’intermédiaire de notre serveur et des
+          prestataires énumérés dans la
+          <a href="/privacy/">Politique de confidentialité</a>. Les réponses du
+          chat IA sont rédigées par un modèle d’Anthropic.
+        </p>
+
+        <h2 id="eligibility">Conditions d’accès</h2>
+        <p>
+          Vous devez avoir au moins <strong>18 ans</strong> pour utiliser Mind
+          Hub. En l’utilisant, vous confirmez que vous avez 18 ans ou plus et que
+          vous avez la capacité de conclure le présent contrat. Nous supprimons
+          les comptes dont nous apprenons qu’ils appartiennent à une personne de
+          moins de 18 ans.
+        </p>
+
+        <h2 id="your-account">Votre compte</h2>
+        <ul>
+          <li>
+            Fournissez des informations exactes lors de votre inscription et
+            gardez votre mot de passe secret. Vous êtes responsable de ce qui se
+            passe sur votre compte.
+          </li>
+          <li>
+            Un compte correspond à une seule personne. Ne le partagez pas, ne le
+            vendez pas et ne le cédez pas, et ne créez pas plusieurs comptes pour
+            contourner les limites des formules (sur iPhone et iPad, un seul
+            compte IA gratuit est autorisé par appareil).
+          </li>
+          <li>
+            Informez-nous à l’adresse
+            <a href="mailto:support@mymindhub.app">support@mymindhub.app</a> si
+            vous pensez qu’une autre personne a utilisé votre compte.
+          </li>
+        </ul>
+
+        <h2 id="acceptable-use">Utilisation acceptable</h2>
+        <p>Vous vous engagez à ne pas :</p>
+        <ul>
+          <li>
+            utiliser Mind Hub pour créer, stocker ou partager des contenus
+            illicites, ou qui portent atteinte à autrui, le harcèlent, le
+            menacent ou l’exploitent, y compris tout contenu sexualisant des
+            mineurs ;
+          </li>
+          <li>
+            tenter de contourner les mesures de sécurité de l’IA (par exemple par
+            « jailbreak » ou injection de prompt), ou de contourner les limites
+            des formules, les limites d’utilisation ou la règle d’un seul compte
+            gratuit par appareil ;
+          </li>
+          <li>
+            accéder au service par des moyens automatisés (bots, scripts,
+            scraping), le revendre ou le remettre à disposition de tiers, ou
+            envoyer des requêtes autrement que par l’application ;
+          </li>
+          <li>
+            perturber, surcharger, sonder ou attaquer l’application, notre
+            serveur ou nos prestataires, ou procéder à l’ingénierie inverse de
+            l’application, sauf dans la mesure où la loi le permet ;
+          </li>
+          <li>
+            porter atteinte aux droits de propriété intellectuelle, à la vie
+            privée ou aux autres droits de quiconque.
+          </li>
+        </ul>
+        <p>
+          Lorsque vous utilisez le chat IA, vous devez également respecter la
+          <a href="https://www.anthropic.com/legal/aup">Politique d’utilisation</a>
+          d’Anthropic.
+        </p>
+
+        <h2 id="ai-output">Contenus générés par l’IA</h2>
+        <ul>
+          <li>
+            Les réponses sont générées automatiquement et peuvent être erronées,
+            incomplètes, obsolètes ou choquantes. Vérifiez toute information
+            importante avant de vous y fier.
+          </li>
+          <li>
+            Les réponses de l’IA <strong>ne constituent pas un conseil
+            professionnel</strong> — ni médical, ni en santé mentale, ni
+            juridique, ni financier, ni fiscal, ni aucun autre conseil
+            professionnel — et ne remplacent pas un professionnel qualifié. En
+            cas d’urgence, contactez les services d’urgence locaux.
+          </li>
+          <li>
+            Vous êtes responsable de la manière dont vous utilisez les réponses
+            de l’IA et de ce que vous en faites, y compris du code généré dans
+            les projets.
+          </li>
+        </ul>
+
+        <h2 id="reporting-ai-replies">Signalement des réponses de l’IA</h2>
+        <p>
+          Si une réponse de l’IA est préjudiciable, illicite ou erronée de toute
+          autre manière, utilisez <strong>Signaler la réponse</strong> sur cette
+          réponse dans le chat, ou écrivez à
+          <a href="mailto:support@mymindhub.app">support@mymindhub.app</a>. Nous
+          examinons chaque signalement. Le contenu d’un signalement est décrit
+          dans la <a href="/privacy/">Politique de confidentialité</a>.
+        </p>
+
+        <h2 id="your-content">Vos contenus</h2>
+        <p>
+          Tout ce que vous créez ou importez dans Mind Hub — notes, pages du
+          carnet, publications du journal, tableaux, projets, dessins,
+          enregistrements, messages du chat et pièces jointes — reste votre
+          propriété. Vous nous accordez une licence limitée, non exclusive,
+          mondiale et gratuite pour stocker, traiter et transmettre vos contenus
+          uniquement dans la mesure nécessaire pour vous fournir le service (par
+          exemple, envoyer vos messages du chat et vos pièces jointes au
+          fournisseur d’IA pour obtenir une réponse). Cette licence prend fin
+          lorsque vous supprimez les contenus ou votre compte, sous réserve de la
+          conservation limitée décrite dans la Politique de confidentialité. Nous
+          n’utilisons pas vos contenus pour entraîner des modèles d’IA et ne les
+          vendons pas.
+        </p>
+        <p>
+          Vous confirmez que vous détenez les droits sur les contenus que vous
+          ajoutez et que ceux-ci ne contreviennent pas aux présentes conditions.
+          Il vous incombe de sauvegarder les contenus stockés uniquement sur
+          votre appareil (Sauvegarde dans l’application).
+        </p>
+
+        <h2 id="subscriptions-and-payments">Abonnements et paiements</h2>
+        <ul>
+          <li>
+            Les formules payantes (Plus, Pro, Max) sont vendues sous forme
+            d’abonnements à renouvellement automatique via
+            l’<strong>Apple App Store</strong> ou
+            <strong>Google Play</strong>, selon les conditions de cette
+            boutique. Le prix et la période sont indiqués dans l’application
+            avant l’achat.
+          </li>
+          <li>
+            Le paiement est débité de votre compte Apple ou de votre compte
+            Google Play lorsque vous confirmez l’achat. L’abonnement se renouvelle
+            automatiquement pour la même période, sauf si vous l’annulez au moins
+            24 heures avant la fin de la période en cours ; le renouvellement est
+            débité dans les 24 heures précédant la fin de la période.
+          </li>
+          <li>
+            Vous gérez et annulez vos abonnements dans les réglages d’abonnement
+            de l’App Store (compte Apple) ou de Google Play. La suppression de
+            l’application ou de votre compte n’annule pas un abonnement.
+          </li>
+          <li>
+            Les remboursements sont traités par Apple ou Google conformément à
+            leurs politiques de remboursement ; nous ne pouvons pas rembourser
+            nous-mêmes les achats effectués dans ces boutiques.
+          </li>
+        </ul>
+
+        <h2 id="free-plan-limits-and-fair-use">Formule gratuite, limites et usage raisonnable</h2>
+        <p>
+          La formule gratuite et chaque formule payante comportent des limites —
+          par exemple sur l’utilisation de l’IA, les projets de code et les
+          tableaux — indiquées dans l’application et sur l’écran Utilisation.
+          Nous pouvons ajuster ces limites afin que le service reste disponible
+          et abordable, et nous afficherons les limites en vigueur dans
+          l’application. Même avec des formules aux limites élevées ou sans
+          limite déclarée, l’utilisation doit rester raisonnable et personnelle ;
+          nous pouvons ralentir ou restreindre une utilisation automatisée,
+          abusive ou dépassant largement un usage personnel normal.
+        </p>
+
+        <h2 id="deleting-your-account">Suppression de votre compte</h2>
+        <p>
+          Vous pouvez supprimer votre compte à tout moment dans l’application :
+          Compte → Supprimer le compte. Cette opération supprime votre compte et
+          ses données sur le serveur ; ce qui est supprimé et ce qui est conservé
+          pendant une durée limitée est décrit dans la
+          <a href="/privacy/">Politique de confidentialité</a>. Annulez tout
+          abonnement actif dans les réglages de votre boutique afin de ne plus
+          être débité.
+        </p>
+
+        <h2 id="suspension-and-termination">Suspension et résiliation</h2>
+        <p>
+          Nous pouvons suspendre ou fermer un compte, ou limiter l’accès au chat
+          IA, si ce compte enfreint les présentes conditions ou la Politique
+          d’utilisation d’Anthropic, fait un usage abusif du service ou de ses
+          limites, ou si la loi l’exige. Lorsque cela est raisonnable, nous vous
+          en indiquerons le motif à l’adresse e-mail de votre compte. Vous pouvez
+          cesser d’utiliser Mind Hub à tout moment.
+        </p>
+
+        <h2 id="changes-to-the-service-and-these-terms">Modifications du service et des présentes conditions</h2>
+        <p>
+          Mind Hub fait l’objet d’un développement actif : nous pouvons ajouter,
+          modifier ou supprimer des fonctionnalités, des formules et des
+          prestataires. Si les présentes conditions sont modifiées, nous mettrons
+          à jour la date figurant en haut de cette page et, pour les
+          modifications importantes, nous vous en informerons dans l’application
+          avant leur entrée en vigueur. Si vous continuez à utiliser Mind Hub
+          ensuite, vous acceptez les nouvelles conditions ; si vous ne les
+          acceptez pas, cessez d’utiliser l’application et supprimez votre
+          compte.
+        </p>
+
+        <h2 id="disclaimer-of-warranties">Exclusion de garanties</h2>
+        <p>
+          Dans la mesure permise par la loi, Mind Hub est fourni « en l’état » et
+          « selon disponibilité », sans garantie d’aucune sorte, expresse ou
+          implicite, y compris quant à l’adéquation à un usage particulier, à
+          l’exactitude des contenus générés par l’IA et à un fonctionnement
+          ininterrompu ou exempt d’erreurs. Nous ne garantissons pas que les
+          données stockées sur votre appareil puissent être récupérées.
+        </p>
+
+        <h2 id="limitation-of-liability">Limitation de responsabilité</h2>
+        <p>
+          Dans la mesure permise par la loi, nous ne sommes pas responsables des
+          dommages indirects, accessoires, spéciaux ou consécutifs, ni de la
+          perte de données, de bénéfices ou de clientèle, résultant de votre
+          utilisation de Mind Hub ou des réponses de l’IA. Notre responsabilité
+          totale pour toute réclamation est limitée au montant que vous avez payé
+          pour Mind Hub au cours des 12 mois précédant la réclamation. Aucune
+          disposition des présentes conditions ne limite la responsabilité qui ne
+          peut être limitée en vertu de la loi, notamment en cas de faute
+          intentionnelle ou de faute lourde, ni vos droits légaux en tant que
+          consommateur.
+        </p>
+
+        <h2 id="governing-law">Droit applicable</h2>
+        <p>
+          Les présentes conditions sont régies par le droit ukrainien. Si vous
+          êtes un consommateur, cela ne vous prive pas de la protection que vous
+          accordent les dispositions impératives du droit du pays où vous
+          résidez, et vous pouvez également intenter une action devant les
+          juridictions de ce pays.
+        </p>
+
+        <h2 id="apple-specific-terms">Conditions propres à Apple</h2>
+        <p>Si vous avez téléchargé Mind Hub depuis l’Apple App Store :</p>
+        <ul>
+          <li>
+            Les présentes conditions sont conclues uniquement entre vous et nous,
+            et non avec Apple. C’est nous, et non Apple, qui sommes seuls
+            responsables de Mind Hub et de son contenu.
+          </li>
+          <li>
+            Votre licence d’utilisation de Mind Hub est limitée aux appareils de
+            marque Apple que vous possédez ou contrôlez, dans les conditions
+            permises par les Règles d’utilisation figurant dans les Conditions
+            générales de l’App Store.
+          </li>
+          <li>
+            Apple n’a aucune obligation de fournir des services de maintenance ou
+            d’assistance pour Mind Hub. Les questions et demandes d’assistance
+            doivent nous être adressées à
+            <a href="mailto:support@mymindhub.app">support@mymindhub.app</a>.
+          </li>
+          <li>
+            Si Mind Hub n’est pas conforme à une garantie applicable, vous pouvez
+            en informer Apple, et Apple vous remboursera le prix d’achat de
+            l’application (le cas échéant). Dans toute la mesure permise par la
+            loi, Apple n’a aucune autre obligation de garantie concernant Mind
+            Hub.
+          </li>
+          <li>
+            C’est nous, et non Apple, qui sommes responsables du traitement de
+            toute réclamation formulée par vous ou par un tiers concernant Mind
+            Hub ou votre utilisation de celui-ci, y compris les réclamations en
+            matière de responsabilité du fait des produits, les réclamations
+            selon lesquelles il ne satisferait pas aux exigences légales ou
+            réglementaires applicables, et les réclamations fondées sur la
+            protection des consommateurs, la protection de la vie privée ou une
+            législation similaire.
+          </li>
+          <li>
+            Si un tiers prétend que Mind Hub ou votre utilisation de celui-ci
+            porte atteinte à ses droits de propriété intellectuelle, c’est nous,
+            et non Apple, qui sommes responsables de l’enquête, de la défense, du
+            règlement et de l’extinction de cette réclamation.
+          </li>
+          <li>
+            Vous confirmez que vous ne vous trouvez pas dans un pays soumis à un
+            embargo du gouvernement des États-Unis ou désigné par celui-ci comme
+            pays « soutenant le terrorisme », et que vous ne figurez sur aucune
+            liste de personnes interdites ou faisant l’objet de restrictions
+            établie par le gouvernement des États-Unis.
+          </li>
+          <li>
+            Lorsque vous utilisez Mind Hub, vous devez également respecter les
+            conditions de tiers applicables, telles que le contrat de votre
+            opérateur mobile ou de votre fournisseur d’accès à internet.
+          </li>
+          <li>
+            Apple et ses filiales sont des tiers bénéficiaires des présentes
+            conditions et, dès que vous les acceptez, Apple aura le droit (et
+            sera réputée avoir accepté ce droit) de les faire valoir à votre
+            encontre en qualité de tiers bénéficiaire.
+          </li>
+        </ul>
+
+        <h2 id="contact">Contact</h2>
+        <p>
+          Questions concernant les présentes conditions :
+          <a href="mailto:support@mymindhub.app">support@mymindhub.app</a>.
+        </p>
+      </main>
+      <footer>
+        <div>© 2026 Mind Hub</div>
+        <div class="links">
+          <a href="/fr/privacy/">Politique de confidentialité</a>
+          <a href="/fr/terms/" aria-current="page">Conditions d’utilisation</a>
+          <a href="/fr/#delete-account">Supprimer le compte</a>
+          <a href="mailto:support@mymindhub.app">Contact</a>
+        </div>
+        <div class="lang"><a href="/terms/" hreflang="en" lang="en" data-lang="en" title="English">EN</a><a href="/ru/terms/" hreflang="ru" lang="ru" data-lang="ru" title="Русский">RU</a><a href="/de/terms/" hreflang="de" lang="de" data-lang="de" title="Deutsch">DE</a><a href="/uk/terms/" hreflang="uk" lang="uk" data-lang="uk" title="Українська">UK</a><a href="/fr/terms/" hreflang="fr" lang="fr" data-lang="fr" title="Français" aria-current="true">FR</a><a href="/es/terms/" hreflang="es" lang="es" data-lang="es" title="Español">ES</a></div>
+      </footer>
+    </div>
+    <script>
+      document.querySelectorAll('.lang a').forEach((a) => a.addEventListener('click', () => {
+        try { localStorage.setItem('lang', a.dataset.lang); } catch (e) {}
+      }));
+    </script>
+  </body>
+</html>

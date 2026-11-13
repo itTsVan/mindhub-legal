@@ -155,5 +155,7 @@
   "footer.privacy": "Політика конфіденційності",
   "footer.terms": "Умови використання",
   "footer.delete": "Видалити акаунт",
-  "footer.contact": "Контакти"
+  "footer.contact": "Контакти",
+  "legal.contents": "Зміст",
+  "legal.translationNote": "Це переклад. Якщо він розходиться з <a href=\"{en}\">англійською версією</a>, чинною є англійська версія."
 }

@@ -155,5 +155,7 @@
   "footer.privacy": "Politique de confidentialité",
   "footer.terms": "Conditions d’utilisation",
   "footer.delete": "Supprimer le compte",
-  "footer.contact": "Contact"
+  "footer.contact": "Contact",
+  "legal.contents": "Sommaire",
+  "legal.translationNote": "Ceci est une traduction. En cas de divergence, la <a href=\"{en}\">version anglaise</a> fait foi."
 }
